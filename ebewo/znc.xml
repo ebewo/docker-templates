@@ -37,7 +37,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/znc</HostDir>
+      <HostDir>/mnt/cache/appdata/znc</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
