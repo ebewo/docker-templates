@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>python-dev</Name>
+  <Repository>ebewo / python-dev-docker</Repository>
+  <Registry>https://hub.docker.com/r/ebewo/python-dev-docker/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ebewo/docker-templates/master/ebewo/python.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1562188629</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>8888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/python-dev/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/python-dev/code</HostDir>
+      <ContainerDir>/code</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>JUPYTER_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="vscode ui" Target="8443" Default="" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="jupyter ui" Target="8888" Default="" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="Appdata 1" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/python-dev/data</Config>
+  <Config Name="Appdata 2" Target="/code" Default="" Mode="rw" Description="Container Path: /code" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/python-dev/code</Config>
+  <Config Name="password" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">Mirage23</Config>
+  <Config Name="Jupyter password" Target="JUPYTER_PASS" Default="" Mode="" Description="Container Variable: JUPYTER_PASS" Type="Variable" Display="always" Required="true" Mask="false">sha1:8bd9b6a27510:ec0f74b42036cbff81f83f83e72970952d6d1978</Config>
+</Container>
