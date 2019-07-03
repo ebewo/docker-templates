@@ -60,11 +60,4 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="vscode ui" Target="8443" Default="" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
-  <Config Name="jupyter ui" Target="8888" Default="" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
-  <Config Name="Appdata 1" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/python-dev/data</Config>
-  <Config Name="Appdata 2" Target="/code" Default="" Mode="rw" Description="Container Path: /code" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/python-dev/code</Config>
-  <Config Name="password" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">Mirage23</Config>
-  <Config Name="Jupyter password" Target="JUPYTER_PASS" Default="" Mode="" Description="Container Variable: JUPYTER_PASS" Type="Variable" Display="always" Required="true" Mask="false">sha1:8bd9b6a27510:ec0f74b42036cbff81f83f83e72970952d6d1978</Config>
 </Container>
