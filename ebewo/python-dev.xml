@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>python-dev</Name>
   <Repository>ebewo/python-dev-docker</Repository>
-  <Registry>https://hub.docker.com/r/ebewo/python-dev-docker/</Registry>
+  <Registry>registry.gitlab.com/ebewo/python-dev-docker</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
