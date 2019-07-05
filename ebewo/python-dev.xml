@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>python-dev</Name>
-  <Repository>ebewo/python-dev-docker</Repository>
-  <Registry>registry.gitlab.com/ebewo/python-dev-docker</Registry>
+  <Repository>registry.gitlab.com/ebewo/python-dev-docker</Repository>
+  <Registry></Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
