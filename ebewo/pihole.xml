@@ -13,7 +13,7 @@
   <Category/>
   <WebUI>http://10.0.0.2</WebUI>
   <TemplateURL/>
-  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/00/Pi-hole_Logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ebewo/docker-templates/master/ebewo/pihole.png</Icon>
   <ExtraParams>--hostname pihole</ExtraParams>
   <PostArgs/>
   <CPUset/>
