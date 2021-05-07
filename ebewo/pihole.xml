@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pi-hole</Name>
+  <Repository>pihole/pihole:latest</Repository>
+  <Registry>https://hub.docker.com/r/pihole/pihole</Registry>
+  <Network>br0</Network>
+  <MyIP>10.0.0.2</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://10.0.0.2</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/00/Pi-hole_Logo.png</Icon>
+  <ExtraParams>--hostname pihole</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1620402647</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort/>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort/>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort/>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort/>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/pihole/pihole/</HostDir>
+      <ContainerDir>/etc/pihole/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/pihole/dnsmasq.d/</HostDir>
+      <ContainerDir>/etc/dnsmasq.d/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WEBPASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.1</Value>
+      <Name>PIHOLE_DNS_</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>"true"</Value>
+      <Name>REV_SERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>heima</Value>
+      <Name>REV_SERVER_DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.1</Value>
+      <Name>REV_SERVER_TARGET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.0/24</Value>
+      <Name>REV_SERVER_CIDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.2</Value>
+      <Name>ServerIP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>"false"</Value>
+      <Name>IPv6</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>"true"</Value>
+      <Name>DNSSEC</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="" Default="53" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="Host Port 2" Target="" Default="53" Mode="udp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="Host Port 3" Target="" Default="67" Mode="udp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">67</Config>
+  <Config Name="Host Port 4" Target="" Default="80" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="pihole config" Target="/etc/pihole/" Default="/mnt/cache/appdata/pihole/pihole/" Mode="rw" Description="Container Path: /etc/pihole/" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/pihole/pihole/</Config>
+  <Config Name="dnsmasq config" Target="/etc/dnsmasq.d/" Default="/mnt/cache/appdata/pihole/dnsmasq.d/" Mode="rw" Description="Container Path: /etc/dnsmasq.d/" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/pihole/dnsmasq.d/</Config>
+  <Config Name="Host Key 1" Target="TZ" Default="Europe/London" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="Host Key 2" Target="WEBPASSWORD" Default="" Mode="" Description="Container Variable: WEBPASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 3" Target="PIHOLE_DNS_" Default="10.0.0.1" Mode="" Description="Container Variable: PIHOLE_DNS_" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.1</Config>
+  <Config Name="Host Key 4" Target="REV_SERVER" Default="" Mode="" Description="Container Variable: REV_SERVER" Type="Variable" Display="always" Required="false" Mask="false">"true"</Config>
+  <Config Name="Host Key 5" Target="REV_SERVER_DOMAIN" Default="10.0.0.0/24" Mode="" Description="Container Variable: REV_SERVER_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false">heima</Config>
+  <Config Name="Host Key 6" Target="REV_SERVER_TARGET" Default="10.0.0.1" Mode="" Description="Container Variable: REV_SERVER_TARGET" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.1</Config>
+  <Config Name="Host Key 7" Target="REV_SERVER_CIDR" Default="10.0.0.0/24" Mode="" Description="Container Variable: REV_SERVER_CIDR" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.0/24</Config>
+  <Config Name="Host Key 8" Target="ServerIP" Default="10.0.0.251" Mode="" Description="Container Variable: ServerIP" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.2</Config>
+  <Config Name="Host Key 9" Target="IPv6" Default="" Mode="" Description="Container Variable: IPv6" Type="Variable" Display="always" Required="false" Mask="false">"false"</Config>
+  <Config Name="Host Key 10" Target="DNSSEC" Default="" Mode="" Description="Container Variable: DNSSEC" Type="Variable" Display="always" Required="false" Mask="false">"true"</Config>
+</Container>
